@@ -1,0 +1,206 @@
+/* Global Styles */
+:root {
+    --darkest-blue: #011f4b;    /* Darkest shade */
+    --dark-blue: #03396c;       /* Dark shade */
+    --medium-blue: #005b96;     /* Medium shade */
+    --light-blue: #6497b1;      /* Light shade */
+    --lightest-blue: #b3cde0;   /* Lightest shade */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--darkest-blue);
+}
+
+/* Navigation */
+.navbar {
+    box-shadow: 0 2px 4px rgba(1,31,75,0.1);
+    background-color: white !important;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--dark-blue) !important;
+}
+
+.nav-link {
+    color: var(--medium-blue) !important;
+}
+
+.nav-link:hover {
+    color: var(--dark-blue) !important;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    color: white;
+    padding-top: 80px;
+    overflow: hidden;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(1,31,75,0.5);
+}
+
+.hero .lead {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(1,31,75,0.5);
+}
+
+.hero h4 {
+    color: var(--lightest-blue) !important;
+    text-shadow: 1px 1px 2px rgba(1,31,75,0.5);
+}
+
+/* Services Section */
+.card {
+    border: none;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(1,31,75,0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.card i {
+    color: var(--medium-blue);
+}
+
+/* About Section */
+.list-unstyled li {
+    margin-bottom: 1rem;
+}
+
+.list-unstyled i {
+    color: var(--medium-blue);
+}
+
+/* Testimonials */
+.testimonials .card {
+    background-color: var(--lightest-blue);
+}
+
+.blockquote-footer {
+    color: var(--dark-blue);
+}
+
+/* Contact Section */
+.form-control {
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    border: 1px solid var(--light-blue);
+}
+
+.form-control:focus {
+    border-color: var(--medium-blue);
+    box-shadow: 0 0 0 0.2rem rgba(0,91,150,0.25);
+}
+
+.contact-info {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(1,31,75,0.1);
+}
+
+.contact-info i {
+    color: var(--medium-blue);
+}
+
+/* WhatsApp Icon */
+.fa-whatsapp {
+    color: var(--medium-blue) !important;
+}
+
+.fa-whatsapp:hover {
+    color: var(--dark-blue) !important;
+}
+
+/* Footer */
+footer a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--medium-blue) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero .lead {
+        font-size: 1.2rem;
+    }
+    
+    .contact-info {
+        margin-top: 2rem;
+    }
+}
+
+/* Animations */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--medium-blue) !important;
+    border-color: var(--medium-blue) !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-blue) !important;
+    border-color: var(--dark-blue) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(1,31,75,0.2);
+}
+
+/* Additional Features */
+.section-padding {
+    padding: 100px 0;
+}
+
+.bg-light {
+    background-color: var(--lightest-blue) !important;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
