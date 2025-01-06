@@ -99,6 +99,25 @@ body {
     color: var(--medium-blue);
 }
 
+/* Touch-friendly card styles */
+.card {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    touch-action: manipulation;
+}
+
+.card:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .card:hover {
+        transform: none;
+    }
+}
+
 /* About Section */
 .list-unstyled li {
     margin-bottom: 1rem;
