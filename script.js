@@ -81,3 +81,50 @@ document.querySelectorAll('.nav-link').forEach(link => {
         navbarCollapse.classList.remove('show');
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.hero-slider .slide');
+    let currentSlideIndex = 0;
+
+    // Function to change slides
+    const changeSlide = () => {
+        // Hide all slides
+        slides.forEach((slide, index) => {
+            slide.style.opacity = '0';
+            slide.style.transition = 'opacity 1s ease-in-out';
+        });
+
+        // Show the current slide
+        slides[currentSlideIndex].style.opacity = '1';
+
+        // Move to the next slide
+        currentSlideIndex = (currentSlideIndex + 1) % slides.length; // Loop back to the first slide
+    };
+
+    // Initialize slides
+    slides.forEach(slide => {
+        slide.style.position = 'absolute';
+        slide.style.top = '0';
+        slide.style.left = '0';
+        slide.style.width = '100%';
+        slide.style.height = '100%';
+        slide.style.backgroundSize = 'cover';
+        slide.style.backgroundPosition = 'center';
+        slide.style.opacity = '0'; // Start hidden
+    });
+
+    // Show the first slide
+    slides[0].style.opacity = '1';
+
+    // Set interval for sliding
+    setInterval(changeSlide, 5000); // Change slide every 5 seconds
+});
+function prevSlide() {
+    currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+    changeSlide();
+}
+
+function nextSlide() {
+    currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+    changeSlide();
+}
